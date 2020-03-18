@@ -1,0 +1,129 @@
+.intro {
+    background-color: $green;
+    width: 100%;
+    height: 480px;
+}
+.intro__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 619px;
+    box-sizing: border-box;
+    padding: 5.8% 0;
+}
+.intro-main__wrap-headline {
+    width: 260px;
+    text-align: center;
+    border: 13px white solid;
+    border-bottom: none;
+    margin-bottom: 70px;
+}
+.intro-main__headline {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+.intro-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-title-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: white;
+}
+.intro-title-block__title {
+    margin-right: 19px;
+    font-size: 60px;
+}
+.intro-title-block__subtitle {
+    font-size: 43px;
+    opacity: 0.5;
+}
+.intro-info__descript {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    color: white;
+    margin: 30px 0;
+}
+.intro-info__link {
+    background-color: $blue;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+}
+.award-item {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid $lightGreen;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.intro-awards {
+    box-sizing: border-box;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+}
+.award-item__pic-block {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $lightGreen;
+}
+.award-item__pic {
+    width: 29px;
+    height: 72px;
+}
+.award-item__descript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+}
+//BREADCRUMBS
+.breadcrumbs {
+    display: flex;
+    padding-top: 20px;
+    align-self: flex-start;
+    align-items: center;
+}
+.breadcrumbs__item {
+    margin-right: 9px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.breadcrumbs__link {
+    font-size: 14px;
+    color: $lightGreen;
+}
+.breadcrumbs__arrow {
+    width: 9px;
+    height: 7px;
+    margin-left: 7px;
+    transform: rotate(-90deg);
+    fill: $lightGreen;
+}
