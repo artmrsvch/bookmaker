@@ -1,90 +1,10 @@
-.assessments__container {
-    @include center;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 65px 5%;
-}
-.assessment-descript {
-    @include center;
-    flex-direction: column;
-    margin-bottom: 65px;
-}
-.assessment-descript__title {
-    font-size: 32px;
-}
-.assessement-descript__subtitle {
-    width: 500px;
-    text-align: center;
-}
 .assessment-reviews {
     @include center;
     width: 100%;
     flex-direction: column;
     margin-bottom: 40px;
 }
-.reviews-nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 35px;
-}
-.reviews-btns {
-    @include center;
-}
-.reviews-btns__item {
-    margin-right: 10px;
-    &:last-child {
-        margin-right: 0;
-    }
-}
 
-.btn-transp {
-    padding: 5px 10px;
-    border: 1px solid $grey;
-    border-radius: 20px;
-    font-size: 16px;
-    color: $grey;
-    &_black {
-        position: relative;
-        color: white;
-        background-color: $blackBtn;
-        padding: 5px 10px 5px 35px;
-        &:after {
-            content: "";
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%) rotate(-45deg);
-            width: 13px;
-            height: 3px;
-            background-color: white;
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            left: 13px;
-            top: 54%;
-            transform: translateY(-50%) rotate(-135deg);
-            width: 7px;
-            height: 3px;
-            background-color: white;
-        }
-    }
-}
-.review-feedback {
-    @include center;
-}
-.review-feedback__btn {
-    margin-right: 30px;
-    color: $blue;
-    font-size: 17px;
-    font-weight: bold;
-    &:last-child {
-        margin-right: 0;
-    }
-}
 .review-list {
     display: grid;
     justify-content: space-between;
@@ -175,13 +95,7 @@
         font-size: 14px;
     }
 }
-.assessment-btn {
-    width: 100%;
-    padding: 15px 0;
-    color: $blue;
-    border: 1px solid $lightGrey;
-    border-radius: 2px;
-}
+
 .review-user {
     display: flex;
     align-items: center;

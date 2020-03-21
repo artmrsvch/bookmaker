@@ -1,0 +1,54 @@
+.company__subtitle {
+    width: 690px;
+}
+.company-main {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.company-menu {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-row-gap: 25px;
+    width: 100%;
+    @include notepad {
+        grid-template-columns: 270px 270px 270px 270px;
+    }
+}
+.compamy-menu__item {
+    border: 1px solid $lightGrey;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
+}
+.company-menu__img {
+    width: 100%;
+    height: 65%;
+}
+.company-descript {
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.company-headline {
+    width: 100%;
+    font-size: 17px;
+}
+.company-headline__title {
+    line-height: 1.4;
+    color: black;
+    &:hover {
+        color: $blue;
+    }
+}
+.company-autor {
+    font-size: 14px;
+    color: $grey;
+    @include between;
+}

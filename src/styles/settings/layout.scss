@@ -36,6 +36,7 @@ button {
     color: inherit;
     cursor: pointer;
 }
+//MAIN-LAYOUT
 .wrapper {
     font-family: "Roboto", sans-serif;
     width: 98.8vw;
@@ -50,4 +51,129 @@ button {
 }
 .section {
     width: 100%;
+}
+//CONTENT LAYOUT
+.content-container {
+    @include center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 65px 5%;
+}
+.content-descript {
+    @include center;
+    flex-direction: column;
+    margin-bottom: 65px;
+}
+.content-descript__title {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+.content-descript__subtitle {
+    width: 500px;
+    line-height: 1.6;
+    font-size: 17px;
+    text-align: center;
+}
+//BRN_BAR
+.buttons-bar {
+    @include center;
+    &_left {
+        justify-content: flex-start;
+        margin-bottom: 35px;
+    }
+}
+.buttons-bar__item {
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.btn-transp {
+    padding: 5px 10px;
+    border: 1px solid $grey;
+    border-radius: 20px;
+    font-size: 16px;
+    color: $grey;
+    &_black {
+        position: relative;
+        color: white;
+        background-color: $blackBtn;
+        padding: 5px 10px 5px 35px;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+            width: 13px;
+            height: 3px;
+            background-color: white;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 13px;
+            top: 54%;
+            transform: translateY(-50%) rotate(-135deg);
+            width: 7px;
+            height: 3px;
+            background-color: white;
+        }
+    }
+    &_indent-for-svg {
+        padding-left: 35px;
+    }
+}
+.btn-wrapper_active .btn-pic {
+    fill: white;
+}
+.btn-wrapper_active .btn-transp {
+    color: white;
+    background-color: $blackBtn;
+}
+.btn-pic {
+    fill: black;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    &_apple {
+        top: 45%;
+    }
+}
+.btn-wrapper {
+    position: relative;
+}
+// SUB BLUE RIGHT BLOCK BTN
+.section-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.sub-btn {
+    @include center;
+}
+.sub-btn__btn {
+    margin-right: 30px;
+    color: $blue;
+    font-size: 17px;
+    font-weight: bold;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+//MORE INFO
+.more-info-btn {
+    width: 100%;
+    padding: 15px 0;
+    color: $blue;
+    border: 1px solid $lightGrey;
+    border-radius: 2px;
 }

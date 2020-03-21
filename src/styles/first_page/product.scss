@@ -1,0 +1,80 @@
+.product-menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.product-present {
+    height: 780px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: $green;
+    @include center;
+}
+.product-pic {
+    margin-right: 100px;
+}
+.product-caroosel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 90px;
+}
+.product-caroosel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.product-caroosel__btn {
+    width: 5px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+    opacity: 0.4;
+    &_active {
+        width: 10px;
+        border-radius: 4px;
+        opacity: 1;
+        margin-left: 2px;
+    }
+}
+.product-description {
+    flex-direction: column;
+    color: white;
+}
+.product-download {
+    height: 70px;
+    width: 170px;
+    background-color: $blue;
+    position: relative;
+}
+.product-description {
+    width: 330px;
+}
+.product-description__app {
+    margin-bottom: 40px;
+    line-height: 1.4;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.product-download_btn {
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-align: start;
+    box-sizing: border-box;
+    padding-left: 55px;
+}
+.product-download__apple {
+    width: 26px;
+    height: 30px;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
