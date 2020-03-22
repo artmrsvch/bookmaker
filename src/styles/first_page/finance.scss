@@ -1,0 +1,112 @@
+.finance-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.finance-svg {
+    height: 20px;
+    &_mc {
+        margin-top: 3px;
+        fill: #f59f20;
+        width: 30px;
+    }
+    &_visa {
+        height: 30px;
+        width: 50px;
+    }
+}
+.funds {
+    width: 100%;
+    height: 410px;
+    @include between;
+    margin-bottom: 40px;
+}
+//LEFT
+.funds-deposit {
+    width: 54.5%;
+    border: 1px solid $grey;
+    height: 100%;
+    border-right: 1px solid red;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+}
+.funds-withdrawal {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    border: 1px solid $grey;
+    border-left: 1px solid red;
+    border-right: none;
+}
+.tablets-head {
+    height: 90px;
+    border-bottom: 1px solid $grey;
+    @include center;
+}
+.tables-head__title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.tables-head__arrow {
+    height: 13px;
+    width: 13px;
+    fill: $blue;
+    &_up {
+        transform: rotate(180deg);
+    }
+}
+.tables-body {
+    width: 100%;
+    height: 78.05%;
+}
+
+.tablets-title {
+    width: 100%;
+    height: 49px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $grey;
+    border-bottom: 1px solid $grey;
+}
+.tablets-title__item {
+    text-align: start;
+}
+
+.payment-svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    display: inline-block;
+    &_mc {
+        fill: #f59f20;
+    }
+    &_world {
+        fill: #4db45f;
+    }
+}
+
+.tablets-row {
+    height: 90px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    border-bottom: 1px solid $grey;
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.tablets-card {
+    display: flex;
+    align-items: center;
+}
+table {
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+}

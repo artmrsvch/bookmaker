@@ -169,6 +169,21 @@ button {
         margin-right: 0;
     }
 }
+.sub-btn__rectangle {
+    width: 50px;
+    height: 30px;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &_blue {
+        background-color: $blue;
+        border: none;
+        color: white;
+    }
+}
 //MORE INFO
 .more-info-btn {
     width: 100%;
