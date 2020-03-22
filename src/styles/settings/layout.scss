@@ -27,6 +27,11 @@ a {
 p {
     margin: 0;
 }
+sup {
+    font-size: 50%;
+    margin-left: 10px;
+    color: $greyText;
+}
 button {
     padding: 0;
     border: none;
@@ -64,6 +69,9 @@ button {
     @include center;
     flex-direction: column;
     margin-bottom: 65px;
+    &_row {
+        flex-direction: row;
+    }
 }
 .content-descript__title {
     font-size: 32px;
@@ -81,6 +89,7 @@ button {
     &_left {
         justify-content: flex-start;
         margin-bottom: 35px;
+        width: 100%;
     }
 }
 .buttons-bar__item {
