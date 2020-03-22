@@ -49,8 +49,15 @@
     height: 70px;
     width: 170px;
     border-radius: 3px;
-    background-color: $blue;
+    background-color: #3a3a40;
     position: relative;
+    transition: 0.2s;
+    &:hover {
+        background-color: $blue;
+    }
+    &_mright {
+        margin-right: 5%;
+    }
 }
 .product-description {
     width: 330px;
