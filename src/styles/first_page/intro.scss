@@ -7,6 +7,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablets {
+        justify-content: center;
+    }
 }
 .intro-main {
     display: flex;
@@ -16,6 +19,12 @@
     width: 619px;
     box-sizing: border-box;
     padding: 5.2% 0;
+    @include n1000 {
+        padding: 7% 0 5.2% 0;
+    }
+    @include phones {
+        justify-content: center;
+    }
 }
 .intro-main__wrap-headline {
     width: 260px;
@@ -23,6 +32,12 @@
     border: 13px white solid;
     border-bottom: none;
     margin-bottom: 70px;
+    @include n1000 {
+        margin-bottom: 50px;
+    }
+    @include phones {
+        margin-bottom: 30px;
+    }
 }
 .intro-main__headline {
     font-size: 40px;
@@ -35,19 +50,29 @@
     align-items: center;
 }
 .intro-title-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center;
     font-weight: 500;
     color: white;
+    @include n1000 {
+        flex-direction: column;
+    }
+    @include phones {
+        display: none;
+    }
 }
 .intro-title-block__title {
     margin-right: 19px;
     font-size: 60px;
+    @include phones {
+        font-size: 50px;
+    }
 }
 .intro-title-block__subtitle {
     font-size: 43px;
     opacity: 0.5;
+    @include phones {
+        font-size: 30px;
+    }
 }
 .intro-info__descript {
     text-align: center;
@@ -82,6 +107,9 @@
     display: flex;
     flex-direction: column;
     width: 210px;
+    @include tablets {
+        display: none;
+    }
 }
 .award-item__pic-block {
     height: 50%;
@@ -105,10 +133,15 @@
 }
 //BREADCRUMBS
 .breadcrumbs {
+    position: absolute;
+    top: 20px;
+    left: 5%;
     display: flex;
-    padding-top: 20px;
     align-self: flex-start;
     align-items: center;
+    @include n1100 {
+        left: 3%;
+    }
 }
 .breadcrumbs__item {
     margin-right: 9px;
@@ -126,4 +159,12 @@
     margin-left: 7px;
     transform: rotate(-90deg);
     fill: $lightGreen;
+}
+.stub {
+    width: 0.1px;
+    height: 0.1px;
+    flex: 0.33;
+    @include tablets {
+        display: none;
+    }
 }

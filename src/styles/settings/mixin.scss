@@ -7,6 +7,16 @@
         @content;
     }
 }
+@mixin n1100() {
+    @media screen and (max-width: 1100px) {
+        @content;
+    }
+}
+@mixin n1000() {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
 @mixin tablets() {
     @media screen and (max-width: 768px) {
         @content;
