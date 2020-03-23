@@ -9,7 +9,6 @@
     display: grid;
     justify-content: space-between;
     grid-template-columns: 24% 24% 24% 24%;
-    grid-row-gap: 25px;
     width: 100%;
     @include notepad {
         grid-template-columns: 270px 270px 270px 270px;
