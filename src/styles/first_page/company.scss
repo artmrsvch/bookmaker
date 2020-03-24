@@ -1,5 +1,8 @@
 .company__subtitle {
     width: 690px;
+    @include tablets {
+        width: auto;
+    }
 }
 .company-main {
     width: 100%;
@@ -14,6 +17,15 @@
     @include notepad {
         grid-template-columns: 270px 270px 270px 270px;
     }
+    @include n1250 {
+        grid-row-gap: 25px;
+        grid-template-columns: 270px 270px;
+        justify-content: space-around;
+    }
+    @include t600 {
+        grid-template-columns: 270px;
+        justify-content: center;
+    }
 }
 .compamy-menu__item {
     border: 1px solid $lightGrey;
@@ -22,6 +34,16 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 450px;
+    @include t600 {
+        display: none;
+        min-height: 310px;
+        &:first-child {
+            display: flex;
+        }
+        &:nth-child(2) {
+            display: flex;
+        }
+    }
 }
 .company-menu__img {
     width: 100%;
@@ -35,6 +57,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include notepad {
+        text-align: center;
+    }
 }
 .company-headline {
     width: 100%;
@@ -51,4 +76,7 @@
     font-size: 14px;
     color: $grey;
     @include between;
+    @include notepad {
+        text-align: center;
+    }
 }

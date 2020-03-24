@@ -11,7 +11,16 @@
     grid-template-columns: 24% 24% 24% 24%;
     width: 100%;
     @include notepad {
-        grid-template-columns: 270px 270px 270px 270px;
+        //grid-template-columns: 270px 270px 270px 270px;
+    }
+    @include n1250 {
+        grid-row-gap: 25px;
+        grid-template-columns: 270px 270px;
+        justify-content: space-around;
+    }
+    @include t600 {
+        grid-template-columns: 270px;
+        justify-content: center;
     }
 }
 .review-list__item {
@@ -21,10 +30,19 @@
     border-radius: 15px;
     &_use {
         display: flex;
+        //офнуть битвин если поедет на маке
         justify-content: space-between;
         flex-direction: column;
-        // height: 100%;
-        // flex: 1;
+    }
+    @include t600 {
+        display: none;
+        min-height: 310px;
+        &:first-child {
+            display: flex;
+        }
+        &:nth-child(2) {
+            display: flex;
+        }
     }
 }
 .assessments-info {

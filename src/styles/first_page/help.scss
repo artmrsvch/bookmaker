@@ -3,20 +3,38 @@
     margin-bottom: 40px;
 }
 .questions-list__item {
+    position: relative;
     width: 100%;
-
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $lightGrey;
+    @include tablets {
+        box-sizing: border-box;
+        padding-right: 20px;
+    }
+    @include phones {
+        margin-right: 0;
+        padding: 0;
+    }
 }
 .questions-block {
     width: 100%;
     height: 70px;
+    line-height: 1.4;
     @include between;
+    @include phones {
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
 }
 .questions-block__text {
     font-size: 19px;
     font-weight: bold;
+    margin-right: 10px;
+    @include phones {
+        margin-right: 0;
+    }
 }
 .questions-list__answer {
     display: none;
@@ -24,6 +42,9 @@
     line-height: 1.4;
     color: $greyText;
     margin-bottom: 35px;
+    @include n1000 {
+        width: 100%;
+    }
 }
 //BTN
 .questions-block__btn {
@@ -31,6 +52,15 @@
     position: relative;
     width: 20px;
     height: 20px;
+    @include tablets {
+        position: absolute;
+        right: 1%;
+        top: 50%;
+        transform: rotate(45deg) translateY(-50%);
+    }
+    @include phones {
+        display: none;
+    }
 }
 
 .questions-block__btn:before,
@@ -56,7 +86,11 @@
     background-color: $blue;
 }
 .questions-list__item_active .questions-block__btn {
-    transform: rotate(90deg);
+    transform: translateY(-50%) rotate(90deg);
+    right: 0;
+    @include t600 {
+        right: -0.5%;
+    }
 }
 .questions-list__item_active .questions-list__answer {
     display: block;

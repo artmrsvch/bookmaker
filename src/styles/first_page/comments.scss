@@ -9,6 +9,9 @@
     }
     &_retwit {
         padding-left: 100px;
+        @include t600 {
+            padding-left: 6.8%;
+        }
     }
 }
 .commets-form {
@@ -41,13 +44,24 @@
     @include between;
 }
 .user-comments__autor {
+    display: flex;
     flex-direction: row;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 .user-comments__autor .review-autor__name {
     margin-right: 8px;
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
 }
 .user-comments__autor .review-autor__date {
     margin-left: 8px;
+    @include tablets {
+        margin-left: 0;
+    }
 }
 .comment-retwit__arrow {
     margin: 0 7px;
@@ -60,9 +74,12 @@
     color: $grey;
 }
 .user-comments__text {
-    width: 70%;
+    width: 100%;
     margin-bottom: 10px;
     line-height: 1.5;
+    @include phones {
+        font-size: 14px;
+    }
 }
 .user-comments__answer {
     color: $grey;
@@ -76,4 +93,7 @@
 }
 .user-comments_retwit .comment-retwit {
     display: block;
+    @include t600 {
+        display: none;
+    }
 }

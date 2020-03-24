@@ -70,6 +70,9 @@ button {
     @include n1100 {
         padding: 65px 3%;
     }
+    @include phones {
+        padding: 5% 3%;
+    }
 }
 .content-descript {
     @include center;
@@ -77,6 +80,9 @@ button {
     margin-bottom: 65px;
     &_row {
         flex-direction: row;
+    }
+    @include phones {
+        margin-bottom: 30px;
     }
 }
 .content-descript__title {
@@ -88,6 +94,9 @@ button {
     line-height: 1.6;
     font-size: 17px;
     text-align: center;
+    @include tablets {
+        width: 100%;
+    }
 }
 //BRN_BAR
 .buttons-bar {
@@ -97,6 +106,14 @@ button {
         margin-bottom: 35px;
         width: 100%;
     }
+    &_adaptive {
+        @include n1250 {
+            justify-content: center;
+        }
+        @include n1100 {
+            flex-wrap: wrap;
+        }
+    }
 }
 .buttons-bar__item {
     margin-right: 10px;
@@ -104,7 +121,11 @@ button {
         margin-right: 0;
     }
 }
-
+.buttons-bar_adaptive .buttons-bar__item {
+    @include n1100 {
+        margin-bottom: 15px;
+    }
+}
 .btn-transp {
     padding: 5px 10px;
     border: 1px solid $grey;
@@ -171,8 +192,18 @@ button {
     justify-content: space-between;
     margin-bottom: 35px;
     &_adaptive {
-        @include notepad {
+        @include n1100 {
             flex-direction: column;
+            align-items: center;
+        }
+        @include tablets {
+            @include between;
+        }
+        &_notepad {
+            @include n1250 {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 }
@@ -180,11 +211,93 @@ button {
 .sub-btn {
     @include center;
 }
+.section-nav_adaptive_notepad .sub-btn {
+    @include notepad {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    @include n1250 {
+        flex-direction: row;
+    }
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.section-nav_adaptive_notepad .sub-btn__btn {
+    @include notepad {
+        margin-right: 0;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include n1250 {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    @include phones {
+        margin-right: 0;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
 .section-nav_adaptive .sub-btn {
-    width: 100%;
+    @include n1250 {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    @include n1100 {
+        flex-direction: row;
+    }
+}
+
+.section-nav_adaptive .sub-btn__btn {
+    @include n1250 {
+        margin-right: 0;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include n1100 {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+}
+.section-nav_adaptive_notepad .buttons-bar {
+    @include n1100 {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
 .section-nav_adaptive .buttons-bar {
-    justify-content: flex-start;
+    @include n1100 {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+.section-nav_adaptive_notepad .buttons-bar__item {
+    @include n1250 {
+        margin-bottom: 15px;
+    }
+}
+.section-nav_adaptive .buttons-bar__item {
+    @include n1100 {
+        margin-bottom: 15px;
+    }
 }
 .sub-btn__btn {
     margin-right: 30px;

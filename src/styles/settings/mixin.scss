@@ -7,6 +7,11 @@
         @content;
     }
 }
+@mixin n1250() {
+    @media screen and (max-width: 1250px) {
+        @content;
+    }
+}
 @mixin n1100() {
     @media screen and (max-width: 1100px) {
         @content;
@@ -19,6 +24,11 @@
 }
 @mixin tablets() {
     @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin t600() {
+    @media screen and (max-width: 600px) {
         @content;
     }
 }

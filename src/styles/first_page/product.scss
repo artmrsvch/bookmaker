@@ -9,15 +9,43 @@
     border-radius: 15px;
     background-color: $green;
     @include center;
+    box-sizing: border-box;
+    padding: 3%;
+    @include tablets {
+        flex-direction: column;
+        height: auto;
+    }
+}
+.product-view {
+    display: flex;
+    align-items: center;
+    @include tablets {
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
 }
 .product-pic {
+    width: 355px;
+    height: 709px;
     margin-right: 100px;
+    @include tablets {
+        margin-right: 0;
+    }
+    @include t600 {
+        width: 176px;
+        height: 357px;
+    }
 }
 .product-caroosel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 90px;
+    margin-right: 10%;
+    @include tablets {
+        margin-bottom: 10%;
+        flex-direction: row;
+        margin-right: 0;
+    }
 }
 .product-caroosel__item {
     display: flex;
@@ -27,6 +55,11 @@
     &:last-child {
         margin-bottom: 0;
     }
+    @include tablets {
+        margin-bottom: 0;
+        margin-right: 10px;
+        flex-direction: row;
+    }
 }
 .product-caroosel__btn {
     width: 5px;
@@ -34,16 +67,31 @@
     border-radius: 2px;
     background-color: white;
     opacity: 0.4;
+    @include tablets {
+        width: 30px;
+        height: 5px;
+    }
     &_active {
         width: 10px;
         border-radius: 4px;
         opacity: 1;
         margin-left: 2px;
+        @include tablets {
+            width: 30px;
+            height: 10px;
+        }
     }
 }
 .product-description {
+    display: flex;
     flex-direction: column;
     color: white;
+    width: 330px;
+    @include tablets {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
 }
 .product-download {
     height: 70px;
@@ -57,10 +105,11 @@
     }
     &_mright {
         margin-right: 5%;
+        @include phones {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
     }
-}
-.product-description {
-    width: 330px;
 }
 .product-description__app {
     margin-bottom: 40px;
